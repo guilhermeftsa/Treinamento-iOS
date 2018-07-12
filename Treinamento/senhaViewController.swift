@@ -1,5 +1,5 @@
 //
-//  DetalheViewController.swift
+//  senhaViewController.swift
 //  Treinamento
 //
 //  Created by administrador on 12/07/2018.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-class DetalheViewController: UIViewController {
+class senhaViewController: UIViewController {
+
+    @IBOutlet weak var senhaResultante: UILabel!
     
-    @IBOutlet weak var MatriculaResultante: UILabel!
-    var matricula: String!
+    var senha: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.MatriculaResultante.text = self.matricula
+        self.senhaResultante.text = self.senha
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

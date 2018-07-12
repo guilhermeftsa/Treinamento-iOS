@@ -19,8 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-1p-iNP">
+                                <rect key="frame" x="16" y="380" width="343" height="34"/>
+                                <color key="backgroundColor" red="0.74639734459999996" green="0.029681038140000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoColorir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxE-bg-arY"/>
+                                    <segue destination="P3r-YA-IVF" kind="show" identifier="segueDetalhe" id="UZO-Dl-reR"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X42-yu-Q1k">
-                                <rect key="frame" x="26" y="204" width="333" height="30"/>
+                                <rect key="frame" x="32" y="204" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -61,21 +72,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-1p-iNP">
-                                <rect key="frame" x="16" y="380" width="343" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9Q-3b-3ni">
+                                <rect key="frame" x="16" y="430" width="343" height="34"/>
                                 <color key="backgroundColor" red="0.74639734459999996" green="0.029681038140000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Entrar">
+                                <state key="normal" title="Mostrar Senha">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoColorir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxE-bg-arY"/>
-                                    <segue destination="P3r-YA-IVF" kind="show" id="UZO-Dl-reR"/>
+                                    <segue destination="7rk-8N-kw0" kind="show" identifier="segueSenha" id="arW-ji-uuQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="X42-yu-Q1k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2xi-VK-8MA"/>
                             <constraint firstItem="NE6-P5-Uzr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="4Rg-5u-B5Y"/>
                             <constraint firstItem="7uh-1p-iNP" firstAttribute="top" secondItem="G13-Ec-Mpi" secondAttribute="bottom" constant="60" id="7iH-Yb-FJu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G13-Ec-Mpi" secondAttribute="trailing" constant="16" id="8My-qP-kWU"/>
@@ -84,17 +93,19 @@
                             <constraint firstItem="fvm-2i-YTI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="EfB-Ih-lcU"/>
                             <constraint firstItem="ASl-k0-Oh5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ICP-ro-Ly8"/>
                             <constraint firstItem="X42-yu-Q1k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="OaC-G5-4bC"/>
-                            <constraint firstItem="X42-yu-Q1k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="TfI-6R-igb"/>
+                            <constraint firstItem="r9Q-3b-3ni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R1B-xD-bKI"/>
                             <constraint firstItem="fvm-2i-YTI" firstAttribute="top" secondItem="7uh-1p-iNP" secondAttribute="bottom" constant="20" id="Vnu-PM-0Bw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7uh-1p-iNP" secondAttribute="trailing" constant="16" id="WBM-0R-mlX"/>
                             <constraint firstItem="szD-0x-eUY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="gjg-GU-Euq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X42-yu-Q1k" secondAttribute="trailing" constant="16" id="i44-S1-GaK"/>
                             <constraint firstItem="X42-yu-Q1k" firstAttribute="top" secondItem="ASl-k0-Oh5" secondAttribute="bottom" constant="15" id="in5-ra-kAB"/>
                             <constraint firstItem="G13-Ec-Mpi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="oRu-bG-7E9"/>
+                            <constraint firstItem="r9Q-3b-3ni" firstAttribute="top" secondItem="7uh-1p-iNP" secondAttribute="bottom" constant="16" id="pGx-0j-hmw"/>
                             <constraint firstItem="7uh-1p-iNP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uLv-Jy-Z8J"/>
                             <constraint firstItem="NE6-P5-Uzr" firstAttribute="top" secondItem="X42-yu-Q1k" secondAttribute="bottom" constant="20" id="ufp-gv-QCP"/>
                             <constraint firstItem="7uh-1p-iNP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMp-kJ-uAb"/>
                             <constraint firstItem="szD-0x-eUY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x1j-mm-zHi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r9Q-3b-3ni" secondAttribute="trailing" constant="16" id="xk6-b6-MrU"/>
                             <constraint firstItem="ASl-k0-Oh5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="104" id="yzH-cR-rYH"/>
                             <constraint firstItem="2gI-M8-ryN" firstAttribute="top" secondItem="fvm-2i-YTI" secondAttribute="bottom" constant="20" id="z1G-wD-k8L"/>
                         </constraints>
@@ -115,20 +126,59 @@
             </objects>
             <point key="canvasLocation" x="1028" y="-244.22788605697153"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhe View Controller-->
         <scene sceneID="i8p-aN-6un">
             <objects>
-                <viewController id="P3r-YA-IVF" sceneMemberID="viewController">
+                <viewController id="P3r-YA-IVF" customClass="DetalheViewController" customModule="Treinamento" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWy-9u-A9C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MatriculaResultante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-ec-lbw">
+                                <rect key="frame" x="111" y="260" width="152" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aOq-qd-BoO"/>
                     </view>
+                    <connections>
+                        <outlet property="MatriculaResultante" destination="kSa-ec-lbw" id="uqE-dN-n9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qxc-6Q-2lR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1727.2" y="-244.22788605697153"/>
+        </scene>
+        <!--Senha View Controller-->
+        <scene sceneID="0fj-76-Pb4">
+            <objects>
+                <viewController id="7rk-8N-kw0" customClass="senhaViewController" customModule="Treinamento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5SD-PO-Eb4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SenhaResultante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLb-HB-ofl">
+                                <rect key="frame" x="122" y="154" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vO5-aJ-gI3"/>
+                    </view>
+                    <connections>
+                        <outlet property="senhaResultante" destination="oLb-HB-ofl" id="eem-Vg-e7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ3-d5-svg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="539"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lWB-de-sn8">

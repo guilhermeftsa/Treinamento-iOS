@@ -35,9 +35,24 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueDetalhe"{
+            if let controller = segue.destination as? DetalheViewController{
+                controller.matricula = self.textFieldMatricula.text
+            }
+        }
+        if segue.identifier == "segueSenha"{
+            if let controller = segue.destination as? senhaViewController{
+                controller.senha = self.textFieldSenha.text
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -45,6 +60,7 @@ class ViewController: UIViewController {
         
        
     }
+    
     
     
     override func viewWillDisappear(_ animated: Bool) {
